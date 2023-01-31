@@ -19,15 +19,15 @@ function updateCartDisplay() {
   let total = 0;
   for (let i = 0; i < cart.length; i++) {
     const product = cart[i];
-    total += parseFloat(product.price.replace("$", ""));
+    total += parseFloat(product.price.replace("₹", ""));
     const productElement = document.createElement("div");
     productElement.innerHTML = `
-      <p>${product.name} - ${product.price}</p>
+      <p>₹{product.name} - ₹{product.price}</p>
     `;
     cartContainer.appendChild(productElement);
   }
   const totalElement = document.createElement("p");
-  totalElement.innerHTML = `Total: $${total.toFixed(2)}`;
+  totalElement.innerHTML = `Total: ₹₹{total.toFixed(2)}`;
   cartContainer.appendChild(totalElement);
 }
 
