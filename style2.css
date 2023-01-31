@@ -56,3 +56,13 @@ main {
 
 .product h3 {
   margin
+  
+#favorite-button {
+  background-color: #ffd700;
+  color: #333;
+  padding: 0.5em 1em;
+  border-radius: 0.2em;
+  border: none;
+  cursor: pointer;
+}
+
