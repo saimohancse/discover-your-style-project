@@ -3,6 +3,7 @@ let cart = [];
 
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", function() {
+    if (buttons[i].textContent === "Add to cart") {
     const product = {
       name: buttons[i].previousElementSibling.previousElementSibling.textContent,
       price: buttons[i].previousElementSibling.textContent
@@ -32,6 +33,8 @@ function updateCartDisplay() {
 
 const buttons = document.querySelectorAll("button");
 let favourites = [];
+
+
 
 for (let i = 0; i < buttons.length; i++) {
   if (buttons[i].textContent === "Add to Favourites") {
